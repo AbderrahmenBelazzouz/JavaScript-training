@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>My Page</title>
+</head>
+
+<body>
+
+	<script src="Myjs.js"></script>
+	<!-- <script type="text/javascript"></script> -->
+
+	<h4 id="welcome">Welcome!</h4>
+	<br>
+	<a onclick="document.write('Yaw hellooooo');" href="page1.html" target="_blank" id="link">Test Link</a>
+	<br><br>
+	<button id="btnCreate">Create</button>
+	<br>
+	<input value="Here input" id="txt">
+	<br>
+	<input value="Here input 2" id="txt2">
+	<br><br>
+	<input type="button" value="Ok" id="btn">
+
+	<br><br>
+	<button onclick="window.txt.value='Hello Events'">CLICK HERE!!</button>
+
+	<br><br>
+	<hr>
+
+	<h2 id="lbl"></h2>
+	<label id="YourName"> Your Name :</label>
+	<input id="txtName">
+	<button onclick="sayHello();">Now Click</button>
+	<br><br>
+	<a href="login.html" target="_blank">Go to Login</a>
+
+
+	<br><br>
+	<hr>
+
+	<h2 id="lbl2"></h2>
+
+	<button onclick="sayHi('ABDOU');">Click Here!</button>
+
+	<button onclick="sayHi2('Marcus', window.text);">Click Here Marcus!</button>
+
+	<input id="text">
+	<br><br>
+
+	<button onclick="showInfos(18, 'Bruno', 'Manchester');">Show Informations</button>
+
+	<input id="text2">
+
+	<p id="lbl3"></p>
+
+	<br>
+
+	<p>
+		<script type="text/javascript">document.write(affichageP());</script>
+	</p>
+
+	<script type="text/javascript">document.write(getInput());</script>
+	<br>
+	<script type="text/javascript">document.write(getInput());</script>
+
+	<p id="ab1"><strong>Abbe 1</strong></p>
+	<p id="ab2"><strong>Abbe 2</strong></p>
+	<p id="ab3"><strong>Abbe 3</strong></strong></p>
+	<p id="ab4"><strong>Abbe 4</strong></p>
+
+
+
+
+	<script type="text/javascript">
+		window.ab1.style.color = 'green';
+		window.ab2.style.backgroundColor = 'gray';
+	// css
+	</script>
+
+	<h3 ondblclick="this.style.color='orange';">Sam</h3>
+
+	<h2 onmousedown="this.style.color='blue';" onmouseup="this.style.color='black';">Drop</h2>
+	<p onmouseenter="this.style.backgroundColor='green';" onmouseleave="this.style.backgroundColor='orange';"> Trafic</p>
+	<p onmouseover="this.style.color='yellow';" onmouseout="this.style.color='black';">Tess</p>
+
+	<img src="js.png" id="imgjs" onmousemove="bigImg(this);">
+	<br>
+	<hr>
+
+
+
+	<label>Number one : </label>
+	<input id="tnum1">
+	<br>
+	<label>Number two : </label>
+	<input id="tnum2">
+	<br>
+	<button id="bttn" onclick="window.prg.innerHTML=''; run();">Okay</button>
+	<br>
+	<button id="bttn2" onclick="window.prg.innerHTML=''; caseSwitch();">What?</button>
+	<p><strong id="prg">Print here!</strong></p>
+
+	<!-- window.prg.innerHTML='abdou'; -->
+	<!-- elle réafriche à chaque fois le résultat -->
+	<hr>
+
+	<script>
+		var names = new Array(4);
+		names[0] = "Abdou1";
+		names[1] = "Abdou2";
+		names[2] = "Abdou3";
+		names[3] = "Abdou4";
+		names[4] = "Abdou5";
+
+		for (x = 0; x < names.length; x++) {
+			document.writeln(names[x] + "<br>");
+		}
+
+	</script>
+	<hr>
+	<script>
+		var a1 = [10, 20, 30];
+		var a2 = [100, 200, 300];
+		var a3 = [1000, 2000, 3000];
+		var all = [a1, a2, a3];
+		for (let row = 0; row < all.length; row++) {
+			for (let col = 0; col < all[row].length; col++) {
+				document.write(all[row][col] + " ; ");
+			}
+			document.write("<br>");
+		}
+
+	</script>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<h1 class="one">Abderrahmen</h1>
+	<input type="text" class="one">
+	<button>Run 1</button>
+	<br>
+	<h1>Abderrahmen 2</h1>
+	<input type="text">
+	<button>Run 2</button>
+	<br>
+	<h1>Abderrahmen 3</h1>
+	<input type="text">
+	<button>Run 3</button>
+	<br>
+	<hr>
+	<p id="msg">RIEN POUR L'INSTANT MAIS...<br></p>
+
+	<script>
+		var allOnes = document.getElementsByTagName("*");
+		for (index = 0; index < allOnes.length; index++) {
+			if (allOnes[index].tagName == "INPUT") {
+				allOnes[index].value = "Hello World!";
+			}
+			if (allOnes[index].tagName == "BUTTON") {
+				allOnes[index].onclick = function () {
+					window.msg.innerHTML += ": Run :";
+				}
+			}
+		}
+
+
+	</script>
+
+
+</body>
+
+</html>
